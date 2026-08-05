@@ -1,0 +1,15 @@
+# Secrets - never commit these
+.env
+
+# Old local SQLite database (no longer used, now on Neon Postgres)
+jobs.db
+*.db
+
+# Python
+__pycache__/
+*.pyc
+
+# Not needed
+1/
+
+important/
