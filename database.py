@@ -50,7 +50,7 @@ def init_db():
 def insert_job(job: dict) -> bool:
     conn = get_connection()
     cur = conn.cursor()
-    cur.execute("SELECT 1 FROM jobs WHERE adzuna_id = %s", (job["adzuna_id"],))
+    cur.execute("SELECT 1 FROM jobs WHERE adzuna_id = %s", (str(job["adzuna_id"]),))
     if cur.fetchone():
         cur.close()
         conn.close()
